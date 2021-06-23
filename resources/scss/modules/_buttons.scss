@@ -1,0 +1,122 @@
+html, body {
+  .button {
+    border-radius:6px;
+    display:inline-block;
+    cursor:pointer;
+    border: solid 2px $main-color;
+    color: $white;
+    background-color: $main-color;
+    padding: 6px 12px;
+    text-decoration:none;
+    font-family: $bold-font;
+    text-transform: uppercase;
+    font-size: ($main-txt - 1);
+    letter-spacing: 0.05em;
+    transition: background-color, border, color 0.2s ease-in-out;
+    width: auto;
+    position: relative;
+    z-index: 2;
+    &.bg-academiques-et-soignants {
+      background-color: $academyc-color;
+      border: solid 2px $academyc-color;
+      &:hover {
+        border: solid 2px $academyc-color;
+        color: $academyc-color;
+        background-color: $white;
+      }
+    }
+    &.bg-industriels {
+      background-color: $industrial-color;
+      border: solid 2px $industrial-color;
+      &:hover {
+        border: solid 2px $industrial-color;
+        color: $industrial-color;
+        background-color: $white;
+      }
+    }
+    &.bg-grand-public {
+      background-color: $people-color;
+      border: solid 2px $people-color;
+      &:hover {
+        border: solid 2px $people-color;
+        color: $people-color;
+        background-color: $white;
+      }
+    }
+    &:hover {
+      border: solid 2px $main-color;
+      color: $main-color;
+      background-color: $white;
+    }
+  }
+
+  .btn-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $ebold-font;
+    font-size: $main-txt;
+    letter-spacing: 0.5px;
+    text-decoration:none;
+    text-transform: uppercase;
+    cursor:pointer;
+    color: $white;
+    padding:($space - 5) ($space + 10);
+    border: 0;
+    transition: background-color, color 0.3s ease-in-out;
+    width: auto;
+    &.active {
+      cursor: default;
+      pointer-events: none;
+    }
+    .icon {
+      font-size: 25px;
+      margin-right: $space - 5;
+    }
+    &.academyc_red {
+      border: solid 2px $academyc-color;
+      background-color: $academyc-color;
+      &.active,
+      &:hover {
+        color: $academyc-color;
+        background-color: $white;
+      }
+    }
+    &.industriel_green {
+      border: solid 2px $industrial-color;
+      background-color: $industrial-color;
+      &.active,
+      &:hover {
+        color: $industrial-color;
+        background-color: $white;
+      }
+    }
+    &.people_blue {
+      border: solid 2px $people-color;
+      background-color: $people-color;
+      &.active,
+      &:hover {
+        color: $people-color;
+        background-color: $white;
+      }
+    }
+    &.current_light_blue {
+      border: solid 2px $second-color;
+      background-color: $second-color;
+      &.active,
+      &:hover {
+        color: $second-color;
+        background-color: $white;
+      }
+    }
+    &.current_dark_blue {
+      border: solid 2px $main-color;
+      background-color: $main-color;
+      &.active,
+      &:hover {
+        color: $main-color;
+        background-color: $white;
+      }
+    }
+  }
+}

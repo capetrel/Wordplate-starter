@@ -1,0 +1,65 @@
+:root {
+  --gap: #{$gap};
+  --container-padding: #{3 *$gap};
+  position: relative;
+
+  @include up(700){
+    --container-padding: #{6 *$gap};
+  }
+
+  @include up(1000){
+    --container-padding: #{8 *$gap};
+  }
+}
+body {
+  overflow-x: hidden;
+  background-color: $white;
+  padding-top: 0;
+  transition: padding-top 0.2s ease-in-out;
+  &.sticky-header {
+   padding-top: 10px;
+  }
+  .bg-grand-public {
+    background-color: $people-color;
+  }
+  .bg-industriels {
+    background-color: $industrial-color;
+  }
+  .bg-academiques-et-soignants {
+    background-color: $academyc-color;
+  }
+  .bg-couleur-principale {
+    background-color: $main-color;
+  }
+
+  .grand-public {
+    color: $people-color;
+  }
+  .industriels {
+    color: $industrial-color;
+  }
+  .academiques-et-soignants {
+    color: $academyc-color;
+  }
+  .couleur-principale {
+    color: $main-color;
+  }
+
+}
+
+.full-width{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header,
+section {
+  margin-bottom: ($space * 3);
+  @include down(1110) {
+    margin-bottom: ($space);
+  }
+}
+a {
+  display: inline-block;
+}

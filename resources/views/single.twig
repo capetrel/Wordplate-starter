@@ -1,0 +1,65 @@
+{% extends 'layouts/base.twig' %}
+
+{% block body %}
+    <div class="page-title container">{{ page_title }}</div>
+    <div class="post-page container">
+        <main>
+            <header>
+                <div class="header-tag">
+                    {% for tag in tags %}
+                        <span class="tag bg-{{ tag_color }}">{{ tag.name }}</span>
+                    {% endfor %}
+                    <span class="date">{{ __('Publié le', 'pasrel') }} <strong> {{ single_post.date|date('d/m/Y') }}</strong></span>
+                </div>
+                <h1 class="post-title">{{ single_post.title }}</h1>
+                {% if single_post.meta('post_head') %}
+                    <div class="post-head">
+                        {{ single_post.meta('post_head') }}
+                    </div>
+                {% endif %}
+                {% if single_post.thumbnail.src %}
+                    <figure class="post-image">
+                        <picture>
+                            <source media="(max-width: 420px)" srcset="{{ single_post.thumbnail.src('medium')|resize(420) }} 420w">
+                            <img src="{{ single_post.thumbnail.src('medium') }}" class="my-thumb-class" alt="{{ single_post.thumbnail.alt ? single_post.thumbnail.alt : single_post.title }}" />
+                        </picture>
+                        <figcaption>{{ single_post.thumbnail.caption }}</figcaption>
+                    </figure>
+                {% endif %}
+            </header>
+
+            {% include 'partials/single_content.twig' %}
+
+            {% if single_post.meta('post_more_link') %}
+                <footer class="more">
+                    <p>{{ __("Plus d'information sur...", 'pasrel') }}</p>
+                    <a class="{{ tag_color }}" href="{{ single_post.meta('post_more_link') }}" target="_blank"><strong>{{ single_post.meta('post_more_text') ? single_post.meta('post_more_text') : single_post.meta('post_more_link') }}</strong></a>
+                </footer>
+            {% endif %}
+
+        </main>
+
+        <aside>
+            <div class="aside-wrapper">
+                <a href="/{{ category.slug }}" class="button bg-{{ tag_color }}">Tous les {{ category.name }}</a>
+                <div class="listing">
+                    <h3 class="{{ tag_color }}">À lire également...</h3>
+                    <div class="post-excerpt">
+                        {% for related in related_posts %}
+                            <a href="{{ related.link }}" target="_self">
+                                <span class="date">>&nbsp;{{ related.date|date('d/m/Y') }}</span>
+                                <p class="content">
+                                    <strong>
+                                        {{ related.post_content|excerpt(10, '...') }}
+                                    </strong>
+                                </p>
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+<section class="partners full-width">
+
+    <div class="partners-wrapper container ">
+        {% for partner in partners %}
+            {% if partner.meta('enable_img_sizing') == 'true' %}
+                {% set size = 'height="'~partner.meta('partner_img_height')~'" width="auto"' %}
+            {% else %}
+                {% set size = '' %}
+            {% endif %}
+            <div class="partner">
+                {% if partner.meta('partner_link') %}
+                    <a href="{{ partner.meta('partner_link') }}" title="Voir le site du partenaire : {{ partner.title }}" target="_blank">
+                        {% if partner.thumbnail is null %}
+                            <img class="{{ size ? 'sizing' : 'partner-img' }} " {{ size }} src="{{ site.theme.link }}/assets/images/default-logo-img.png')" alt="Pas d'image">
+                        {% else %}
+                            <img class="{{ size ? 'sizing' : 'partner-img' }}" {{ size }} src="{{ partner.thumbnail.src('logo_partner') }}" alt="{{ partner.thumbnail.alt ? partner.thumbnail.alt : partner.title }}">
+                        {% endif %}
+                    </a>
+                {% else %}
+                    {% if partner.thumbnail is null %}
+                        <img class="{{ size ? 'sizing' : 'partner-img' }}" {{ size }} src="{{ site.theme.link }}/assets/images/default-logo-img.png')" alt="Pas d'image">
+                    {% else %}
+                        <img class="{{ size ? 'sizing' : 'partner-img' }}" {{ size }} src="{{ partner.thumbnail.src('logo_partner') }}" alt="{{ partner.thumbnail.alt ? partner.thumbnail.alt : partner.title }}">
+                    {% endif %}
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+
+</section>

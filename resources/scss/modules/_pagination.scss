@@ -1,0 +1,68 @@
+.events-page .pagination {
+  margin-left: auto;
+  margin-right: 11%;
+  @include down(1110) {
+    margin-right: auto;
+  }
+}
+.pagination {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  margin-bottom: $space;
+  margin-left: auto;
+  .arrow-container {
+    display: block;
+  }
+  .prev, .next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    line-height: 1.1;
+    font-family: $bold-font;
+    color: $white;
+    text-align: center;
+    background-color: $main-color;
+    border-radius: 50%;
+    padding-top: 3px;
+    transition: background-color 0.2s ease-in-out;
+    &:hover {
+      background-color: $second-color;
+    }
+    i {
+      font-size: 22px;
+    }
+  }
+  .prev {
+    padding-right: 2px;
+  }
+  .next {
+    padding-left: 2px;
+  }
+  ul.pages {
+    font-size: $main-txt + 3px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0 $space;
+    li {
+      a {
+        transition: color 0.2s ease-in-out;
+        &:hover {
+          color: $second-color;
+        }
+      }
+      span.current {
+        font-family: $bold-font;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.container {
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+  @include down(1120) {
+    max-width: 880px;
+  }
+  @include down(890) {
+    max-width: 720px;
+  }
+  @include down(730) {
+    max-width: 560px;
+  }
+  @include down(570) {
+    max-width: 420px;
+  }
+  @include down(430) {
+    max-width: 100%;
+    padding-left: $space;
+    padding-right: $space;
+  }
+}
+
+@function space($i) {
+  @return calc(var(--gap) * #{$i});
+}
+
+@each $i in 1,2,3,4 {
+  .mb-#{i} {
+    margin-bottom: space($i);
+  }
+  .mt-#{i} {
+    margin-top: space($i);
+  }
+}

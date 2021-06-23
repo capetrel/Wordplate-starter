@@ -1,0 +1,30 @@
+<section class="highlights {{ display }}">
+    {% if(items.found_posts == 0) %}
+        <div class="highlight item-0">
+            <div class="highlight-body">
+                <p class="excerpt">{{ __('Aucun articles trouvés', 'pasrel') }}</p>
+            </div>
+        </div>
+    {% else %}
+        {% for k, highlight in items %}
+            <div class="highlight item-{{ k }}">
+                <div class="highlight-header">
+                    {% if highlight.thumbnail is null %}
+                        <img src="{{ site.theme.link }}/assets/images/default/img-540x570.png" alt="Pas d'image">
+                    {% else %}
+                        <picture>
+                            <source media="(max-width: 420px)" srcset="{{ highlight.thumbnail.src('archive_thumbs_md')|resize(420) }} 420w">
+                            <img src="{{ highlight.thumbnail.src('archive_thumbs_md') }}" alt="{{ highlight.thumbnail.alt ? highlight.thumbnail.alt : highlight.tile }}">
+                        </picture>
+                    {% endif %}
+                </div>
+                <div class="highlight-body">
+                    <span class="date">{{ highlight.date('d/m/Y') }}</span>
+                    <h2 class="title">{{ highlight.title }}</h2>
+                    <p class="excerpt">{{ highlight.post_content|excerpt(50, '...') }}</p>
+                    <a class="more" href="{{ highlight.link }}" title="{{ __('Lire l\'article') }}">{{ __('Lire l\'article') }}</a>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+</section>

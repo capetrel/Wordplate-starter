@@ -1,0 +1,14 @@
+# pasrel.test/
+# Mieux connecter la Recherche, l’Hôpital et l’Industri
+
+# TEAM
+
+    John Doe -- @johndoe
+
+# THANKS
+
+    Agence -- @efil
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, PHP7, Wordpress

@@ -1,0 +1,15 @@
+{% extends 'layouts/base.twig' %}
+
+{% block body %}
+
+    {% include 'partials/header_buttons.twig' %}
+
+    <main class="page-1col container {{ post.meta('taxonomy_select_color') }}">
+
+        {% include 'partials/content.twig' %}
+
+    </main>
+    {% if post.meta('enable_posts_on_footer') == 'display' %}
+        {% include 'partials/last_highlights_all.twig' %}
+    {% endif %}
+{% endblock %}

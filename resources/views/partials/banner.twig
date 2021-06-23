@@ -1,0 +1,44 @@
+{% set image = Image(post.thumbnail) %}
+<div class="banner">
+
+    {% if bigbanner %}
+        {% if image.src('banner_home') %}
+            <picture>
+                <source media="(max-width: 420px)" srcset="{{ post.thumbnail.src('banner_home')|resize(420, 210) }} 420w">
+                <source media="(max-width: 1080px)" srcset="{{ post.thumbnail.src('banner_home')|resize(1080, 210) }} 1080w">
+                <img class="banner-bg" src="{{ image.src('banner_home') }}" alt="{{ image.alt ? image.alt : post.title }}" />
+            </picture>
+        {% else %}
+            <img class="banner-bg" src="{{ site.theme.link }}/assets/images/default/img-1920x388.png" alt="Image" />
+        {% endif %}
+    {% else %}
+
+        {% if image.src('banner_page') %}
+            <picture>
+                <source media="(max-width: 420px)" srcset="{{ post.thumbnail.src('banner_page')|resize(420, 117) }} 420w">
+                <source media="(max-width: 1080px)" srcset="{{ post.thumbnail.src('banner_page')|resize(1080, 117) }} 1080w">
+                <img class="banner-bg" src="{{ image.src('banner_page') }}" alt="{{ image.alt ? image.alt : post.title }}" />
+            </picture>
+        {% else %}
+            <img class="banner-bg" src="{{ site.theme.link }}/assets/images/default/img-1920x388.png" alt="Image" />
+        {% endif %}
+    {% endif %}
+
+    {% if post.meta('enable_banner_calc') == 'enable'  %}
+        {% if post.meta('taxonomy_select_color') %}
+            <div class="banner-overlay {{ post.meta('taxonomy_select_color') }}"></div>
+        {% else %}
+            <div class="banner-overlay current_light_blue"></div>
+        {% endif %}
+    {% endif %}
+
+    <div class="banner-title container">
+        {% if post.meta('banner_title') %}
+            {{ __(post.meta('banner_title'), 'pasrel') }}
+        {% endif %}
+        {% if post.type == 'post' %}
+            <p>{{ __('Actualités', 'pasrel') }}</p>
+        {% endif %}
+    </div>
+
+</div>

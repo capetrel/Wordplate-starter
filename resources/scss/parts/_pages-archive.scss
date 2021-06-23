@@ -1,0 +1,141 @@
+main.archive-page {
+  .grid-items{
+    img {
+      width: 540px;
+      height: 570px;
+      object-fit: cover;
+    }
+    .date {
+      display: inline-block;
+      margin-bottom: $space - 10;
+      margin-top: $space - 10;
+    }
+  }
+}
+
+.page-template-page-acces-evenements {
+  .events-page {
+    aside {
+      margin-top: 0;
+    }
+  }
+}
+
+.events-page,
+.post-page {
+  display: flex;
+  flex-wrap: wrap;
+  main {
+    width: 65%;
+    @include down(580) {
+      width: 100%;
+    }
+  }
+  aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 35%;
+    @include down(1110) {
+      display: block;
+      width: 280px;
+    }
+  }
+  @include down(1110) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+.events-page {
+  main {
+    .event {
+      padding: ($space + 15) 0 ($space + 10) 0;
+      border-bottom: solid 1px $main-color;
+      &:first-child {
+        padding: 0 0 ($space + 10) 0;
+      }
+      &:last-child {
+        border-bottom: none
+      }
+      .event-header {
+        margin-bottom: $space;
+      }
+    }
+  }
+  aside {
+    margin-top: -100px;
+    padding-bottom: $space;
+    .right-page-event {
+      margin: ($space - 10) 0 0 0;
+    }
+    @include down(1110) {
+      margin-top: 0;
+      margin-bottom: $space;
+    }
+  }
+}
+
+.highlights-page .highlights .highlight,
+.press-releases-page .press-releases .press-release {
+  width: 540px;
+  padding-bottom: 30px;
+  margin-top: 30px;
+  border-bottom: solid 1px $main-color;
+  @include down(1120) {
+    width: 100%;
+  }
+  &:nth-child(even) {
+    .press-release-header {
+      img {
+        height: 360px;
+      }
+    }
+    .highlight-header {
+      img {
+        height: 360px;
+      }
+    }
+  }
+}
+/*
+.press-releases-page {
+  .press-releases {
+    .press-release {
+      width: 540px;
+      padding-bottom: 30px;
+      margin-top: 30px;
+      border-bottom: solid 1px $main-color;
+      &:nth-child(even) {
+        .press-release-header {
+          img {
+            height: 360px;
+          }
+        }
+      }
+    }
+  }
+}*/
+
+/*
+.highlights-page {
+  .highlights {
+    .highlight {
+      width: 540px;
+      padding-bottom: 30px;
+      margin-top: 30px;
+      border-bottom: solid 1px $main-color;
+      @include down(1120) {
+        width: 100%;
+      }
+      &:nth-child(even) {
+        .highlight-header {
+          img {
+            height: 360px;
+          }
+        }
+      }
+    }
+  }
+}*/

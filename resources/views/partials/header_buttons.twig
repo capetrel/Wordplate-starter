@@ -1,0 +1,11 @@
+{% if post.meta('_enable_under_banner_btns') == 'enable' %}
+    <nav class="container btn-list-wrapper {{ total_btns <= 2 ? 'btn-center' : 'btn-grid-'~total_btns  }}">
+        {% for k, button in page_buttons %}
+            {% set href = function('get_permalink', button['under_banner_btn_link'][0]['id']) %}
+            <a class="btn-header {{ post.meta('taxonomy_select_color') ? post.meta('taxonomy_select_color') : 'current_light_blue' }} {{ button['under_banner_enable_xhr'][0] == 'true' ? 'page' : ''}}" href="{{ button['under_banner_btn_link'] ? href : '#' }}" title="Voir la page : {{ button['title'] }}">
+                <i class="icon {{ button['under_banner_btn_icon'] }}"></i>
+                <span class="content">{{ button['under_banner_btn_title'] }}</span>
+            </a>
+        {% endfor %}
+    </nav>
+{% endif %}

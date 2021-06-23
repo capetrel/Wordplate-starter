@@ -1,0 +1,93 @@
+body {
+  .page-title h1,
+  .page-title {
+    @extend %mainh1;
+    margin-bottom: ($space + 19);
+    @include down(1110) {
+      text-align: center;
+    }
+  }
+}
+
+body.page-template-default,
+body.page-template {
+  .container.btn-list-wrapper.btn-grid-5{
+    max-width: 890px;
+    @include down(570){
+      max-width: 83%;
+    }
+  }
+  .btn-list-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: ($space + 20);
+    gap: ($space + 10);
+    .btn-header {
+      width: fit-content;
+      @include down(570){
+        width: 100%;
+      }
+    }
+  }
+}
+
+main {
+  .tag {
+    display: inline-block;
+    padding: $space - 15 $space - 10;
+    text-transform: uppercase;
+    font-family: $medium-font;
+    border-radius: 5px;
+    color: $white;
+  }
+  .more {
+    text-transform: uppercase;
+    font-family: $bold-font;
+    @include underlined($main-color, $main-color)
+  }
+}
+
+main.page-2col {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: ($space * 2);
+  margin-bottom: ($space * 3);
+  &.img-left {
+    flex-direction: row;
+    @include down(880) {
+      flex-direction: column-reverse;
+    }
+  }
+  &.img-right {
+    flex-direction: row-reverse;
+    @include down(880) {
+      flex-direction: column-reverse;
+    }
+  }
+  .col {
+    width: 50%;
+    margin: 0 ($space + 13) 0 ($space + 13);
+    @include down(880) {
+      width: 100%;
+      margin: 0;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+main.page-1col {
+  section.container {
+    max-width: 880px;
+  }
+}
+
+main.page-accordion  {
+  @include down(1160) {
+    padding: 0 ($space + 25) 0 ($space);
+  }
+}

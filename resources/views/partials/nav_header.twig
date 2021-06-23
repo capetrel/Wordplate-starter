@@ -1,0 +1,23 @@
+<div id="navHeader" class="nav-header">
+    <div class="nav-header-wrapper container">
+
+        {% include 'partials/header_menu.twig' %}
+
+        <div id="logoHeader" class="logo">
+            {{ function('the_custom_logo') }}
+        </div>
+
+        <div class="various">
+            <div class="lang">
+                <a class="active" href="#">FR</a><span>&nbsp;/&nbsp;</span><a href="#">EN</a>
+            </div>
+            {% if header_sn is not null %}
+                <div class="social">
+                    {% for icon in header_sn %}
+                        <a class="sn-link" href="{{ icon.social_header_url }}"><i class="{{ icon.social_header_icon }}"></i></a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

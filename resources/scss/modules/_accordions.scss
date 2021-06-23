@@ -1,0 +1,155 @@
+.accordions {
+  .ac-header {
+    color: $second-color;
+  }
+  .ac-trigger {
+    background-color: $main-color;
+  }
+}
+
+.academyc_red{
+  .accordions {
+    .accordion {
+      border: solid 1px $academyc-color;
+      .ac-header {
+        color: $academyc-color;
+      }
+      .ac-trigger {
+        background-color: $academyc-color;
+      }
+    }
+  }
+}
+
+.industriel_green{
+  .accordions {
+    .accordion {
+      border: solid 1px $industrial-color;
+      .ac-header {
+        color: $industrial-color;
+      }
+      .ac-trigger {
+        background-color: $industrial-color;
+      }
+    }
+  }
+}
+
+.people_blue{
+  .accordions {
+    .accordion {
+      border: solid 1px $people-color;
+      .ac-header {
+        color: $people-color;
+      }
+      .ac-trigger {
+        background-color: $people-color;
+      }
+    }
+  }
+}
+.accordions {
+  .accordion {
+    position: relative;
+    background-color: $white;
+    border: solid 1px $main-color;
+    padding: ($space + 20) ($space * 4) ($space + 20) ($space + 10);
+    margin-bottom: ($space + 15);
+    @include down(720) {
+      padding-right: ($space * 3);
+    }
+    .ac-header {
+      font-size: 22px;
+      font-family: $ebold-font;
+      line-height: 1.2em;
+      transition: margin .2s ease-in-out;
+      @include down(720) {
+        font-size: 22px;
+      }
+    }
+    .ac-trigger {
+      position: absolute;
+      top: 33%;
+      right: 0;
+      left: 98.25%;
+      display: block;
+      color: $white;
+      text-align: center;
+      width: 40px;
+      height: 40px;
+      padding: 7px;
+      cursor: pointer;
+      transition: position, top .2s ease-in-out .2s;
+      text-decoration: none;
+      margin: 0;
+      border: 0;
+      @include down(720) {
+        left: 96%;
+      }
+      &:after {
+        display: flex;
+        content: '\002B';
+        justify-content: center;
+        align-items: center;
+        font: normal 32px 'Arial', sans-serif;
+        line-height: 0;
+      }
+    }
+    .ac-panel {
+      overflow: hidden;
+      transition: height, visibility .2s ease-in-out;
+      .inner {
+        display: flex;
+        flex-wrap: wrap;
+        @include down(890) {
+          flex-direction: column-reverse;
+        }
+        .img-wrapper {
+          width: 356px;
+          height: auto;
+          margin-right: ($space + 5);
+          @include down(890) {
+            margin-top: $space;
+            margin-right: auto;
+            margin-left: auto;
+          }
+          img {
+            width: 100%;
+          }
+        }
+        .formatted-content {
+          flex: 1;
+          .forward-p {
+            @include down(720) {
+              font-size: 18px;
+              line-height: 1.1;
+            }
+          }
+        }
+      }
+    }
+    &.js-enabled {
+      .ac-panel {
+        visibility: hidden;
+      }
+    }
+    &.is-active {
+      .ac-header {
+        margin-bottom: ($space + 18);
+        transition: margin .2s ease-in-out .2s;
+      }
+      .ac-panel {
+        visibility: visible;
+      }
+      & > .ac-trigger{
+        top: 45%;
+        transition: position, top .2s ease-in-out .2s;
+        &:after {
+          content: '\2012';
+          display: block;
+          margin-top: -2px;
+        }
+      }
+    }
+  }
+}

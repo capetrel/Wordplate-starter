@@ -1,0 +1,16 @@
+<div class="input-group {{ filter_class }}-filter">
+    <label for="{{ filter_class }}-filter">{{ __('Filtrer par&nbsp;:', 'pasrel') }}</label>
+    <span class="border-select">
+        <select name="{{ filter_class }}-filter" id="{{ filter_class }}-filter">
+            {% for value, option in select_items %}
+                {% if(value != 'active') %}
+                    {% if(select_items['active'] == value) %}
+                        <option value="{{ value }}" selected>{{ __(option, 'pasrel') }}</option>
+                    {% else %}
+                        <option value="{{ value }}">{{ __(option, 'pasrel') }}</option>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </select>
+    </span>
+</div>

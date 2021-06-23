@@ -1,0 +1,17 @@
+<section class="homeblocks container">
+    {% for i in 1..3 %}
+        <div class="homeblock-item">
+            <a class="homeblock-link" href="{{ post.meta('homeblock_link_'~i) }}" title="{{ __('En savoir +', 'pasrel') }}">
+                <img class="homeblock-bg" src="{{ Image(post.meta('homeblock_image_'~i)).src('home_more') }}" alt="{{ Image(post.meta('homeblock_image_'~i)).alt ? Image(post.meta('homeblock_image_'~i)).alt : post.meta('homeblock_title_'~i) }}" />
+                <div class="homeblock-overlay {{ post.meta('homeblock_select_color_'~i) }}"></div>
+                <div class="homeblock-content">
+                    <p>
+                        <span class="homeblock-access">{{ __('Accès', 'pasrel') }}</span>
+                        {{ post.meta('homeblock_title_'~i) }}
+                        <span class="homeblock-more">{{ __('En savoir +', 'pasrel') }}</span>
+                    </p>
+                </div>
+            </a>
+        </div>
+    {% endfor %}
+</section>

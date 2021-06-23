@@ -1,0 +1,35 @@
+section.partners {
+  border-top: solid 2px $gray2;
+  margin-bottom: 0;
+  .partners-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: ($space + 10) 0;
+    .partner {
+      margin: ($space - 10);
+      height: 70px;
+      width: auto;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+      img.partner-img {
+        height: 100%;
+        width: auto;
+      }
+      img.sizing {
+        width: auto;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

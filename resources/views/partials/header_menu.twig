@@ -1,0 +1,14 @@
+<input id="burger" type="checkbox" />
+<label for="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+</label>
+<div class="main-menu-wrapper">
+    <div class="main-menu container">
+        <div class="top-overlay"></div>
+        {{ function('wp_nav_menu', {theme_location: 'header', container: 'nav', }) }}
+        {{ function('get_search_form') }}
+    </div>
+</div>
+

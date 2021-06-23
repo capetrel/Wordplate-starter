@@ -1,0 +1,130 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "p-icons";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/pasrel-icon-font.svg?ddbeeac76311e868a398071421d017fa) format("svg");
+}
+@font-face {
+  font-family: "p-icons";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/pasrel-icon-font.woff?0275f724eaca40983b7174020dd3407b) format("woff");
+}
+@font-face {
+  font-family: "p-icons";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/pasrel-icon-font.ttf?9fac76bf88c179ee1b5b22e80a60a423) format("ttftruetype");
+}
+[class^=ps-], [class*=" ps-"] {
+  font-family: "p-icons" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ps-facebook-box:before {
+  content: "";
+}
+
+.ps-instagram-box:before {
+  content: "";
+}
+
+.ps-instagram-fill:before {
+  content: "";
+}
+
+.ps-linkedin-box:before {
+  content: "";
+}
+
+.ps-mail-line:before {
+  content: "";
+}
+
+.ps-map-pin-line:before {
+  content: "";
+}
+
+.ps-smartphone-fill:before {
+  content: "";
+}
+
+.ps-smartphone-line:before {
+  content: "";
+}
+
+.ps-twitter-box:before {
+  content: "";
+}
+
+.ps-whatsapp-fill:before {
+  content: "";
+}
+
+.ps-youtube-fill:before {
+  content: "";
+}
+
+.ps-arborescence:before {
+  content: "";
+}
+
+.ps-board:before {
+  content: "";
+}
+
+.ps-book:before {
+  content: "";
+}
+
+.ps-doc:before {
+  content: "";
+}
+
+.ps-faq:before {
+  content: "";
+}
+
+.ps-hp:before {
+  content: "";
+}
+
+.ps-hub:before {
+  content: "";
+}
+
+.ps-members:before {
+  content: "";
+}
+
+.ps-platforms:before {
+  content: "";
+}
+
+.ps-presse:before {
+  content: "";
+}
+
+.ps-link-default:before {
+  content: "";
+}
+
+.ps-arrow-left:before {
+  content: "";
+}
+
+.ps-arrow-right:before {
+  content: "";
+}
+
+.ps-magnifyer:before {
+  content: "";
+}

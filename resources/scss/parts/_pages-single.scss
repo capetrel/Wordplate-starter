@@ -1,0 +1,76 @@
+.single {
+  .post-page {
+    main{
+      img {
+        width: 100%;
+        height: auto;
+      }
+      header {
+        margin-bottom: $space;
+        .header-tag {
+          margin-bottom: $space;
+        }
+        .post-title {
+          padding-top: ($space + 5);
+          border-top: solid 1px $main-color;
+          font-family: $light-font;
+          margin-bottom: $space;
+        }
+        .post-head {
+          margin-bottom: ($space + 10);
+        }
+        .post-image {
+          margin-bottom: ($space + 5);
+          img {
+            margin-bottom: ($space - 10);
+          }
+          figcaption {
+            color: $gray7;
+          }
+        }
+      }
+      section {
+        margin-bottom: 0;
+        padding-bottom: $space;
+      }
+      footer {
+        padding-top: ($space + 10);
+        border-top: solid 1px $main-color;
+        text-transform: uppercase;
+        margin-bottom: ($space * 3);
+        @include down(1110) {
+          margin-bottom: ($space + 10);
+        }
+        p{
+          font-family: $light-font;
+          margin: 0;
+        }
+        a {
+          @include underlined($main-color, $main-color);
+        }
+      }
+    }
+    aside {
+      .aside-wrapper {
+        width: 80%;
+        .button {
+          width: 100%;
+          padding: 15px 15px 12px 15px;
+          text-transform: uppercase;
+          margin-bottom: $space;
+        }
+        .listing {
+          background-color: $gray2;
+          padding: $space;
+        }
+        @include down(1110) {
+          width: 100%;
+        }
+      }
+      @include down(1110) {
+        width: 50%;
+        margin-bottom: ($space + 10);
+      }
+    }
+  }
+}

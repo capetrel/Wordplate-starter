@@ -1,0 +1,19 @@
+{% extends 'layouts/base.twig' %}
+
+{% block body %}
+
+    <main class="highlights-page archive-page container">
+        <div class="page-title">
+            {% include 'partials/page_title.twig' %}
+        </div>
+
+        {% include 'partials/content.twig' %}
+
+        {% include 'partials/select_filter.twig' %}
+
+        {% include 'posts/filtered-highlights.twig' %}
+
+        {% include 'partials/pagination.twig' %}
+    </main>
+
+{% endblock %}

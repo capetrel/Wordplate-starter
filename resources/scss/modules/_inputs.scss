@@ -1,0 +1,40 @@
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $space + 10;
+  label {
+    text-transform: uppercase;
+    font-family: $bold-font;
+    margin-bottom: $space - 15px;
+  }
+  .border-select {
+    select {
+      display: grid;
+      position: relative;
+      font-family: $bold-font;
+      color: $main-color;
+      width: 100%;
+      border: solid 2px $gray8;
+      border-radius: 3px;
+      padding: 10px;
+      background: url(../../img/icons/arrow-down.svg) no-repeat right 5% center;
+      background-size: 20px 11px;
+      cursor: pointer;
+      appearance: none;
+    }
+  }
+}
+
+.press-releases-page .input-group,
+.highlights-page .input-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: ($space - 10);
+  width: 50%;
+  label {
+    line-height: 1em;
+    margin-bottom: 0;
+    margin-right: $space;
+  }
+}

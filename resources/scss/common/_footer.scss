@@ -1,0 +1,178 @@
+.footer{
+  background-color: $main-color;
+  color: $white;
+  padding: 40px 0 35px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    .left-footer,
+    .right-footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 50%;
+      @include down(890) {
+        width: 70%;
+      }
+      @include down(720) {
+        width: 100%;
+      }
+    }
+    @include down(1110) {
+      flex-direction: column;
+      align-items: center;
+    }
+    .left-footer{
+      font-family: $regular-font;
+      padding-right: ($space * 2);
+      border-right: solid $white 2px;
+      @include down(1110) {
+        padding-right: 0;
+        border-right: 0;
+        border-bottom: solid $white 2px;
+        padding-bottom: $space;
+      }
+      .widget-wrapper {
+        p {
+          margin: ($space - 10) 0;
+          @include down(1110) {
+            text-align: center;
+          }
+        }
+      }
+      .sn-widget-wrapper {
+        padding-right: ($space);
+        .widget-content {
+          display: inline-block;
+          height: fit-content;
+          margin: ($space - 10px) 0 ($space) 0;
+          @include down(1110) {
+            margin: ($space * 2) 0 0 0;
+          }
+          .sn-link {
+            display: flex;
+            align-content: center;
+            font-family: $medium-font;
+            font-size: 20px;
+            line-height: 1;
+            text-transform: uppercase;
+            i {
+              margin-right: ($space - 5px);
+              color: $second-color;
+              font-size: 30px;
+              line-height: 0.6;
+            }
+          }
+        }
+      }
+      .cr-widget-wrapper {
+        .copyright{
+          letter-spacing: 0.5px;
+          text-transform: uppercase;
+        }
+        .pipe {
+          padding: 0 ($space - 10);
+        }
+        a {
+          @include underlined($white, $white);
+          font-size: 15px;
+        }
+        @include down(1110) {
+          display: none;
+        }
+      }
+    }
+    .right-footer{
+      padding-left: ($space * 2);
+      @include down(1110) {
+        padding-left: 0;
+        padding-top: $space;
+      }
+      .particulars-widget-wrapper {
+        .widget-content {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          span {
+            display: inline-block;
+          }
+          .widget-title {
+            display: block;
+            font-family: $medium-font;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-bottom: $space + 15;
+            @include down(1110) {
+              margin-bottom: $space;
+            }
+          }
+          .contact-informations {
+            font-style: normal;
+            .inline {
+              display: flex;
+              align-content: center;
+              margin-bottom: ($space + 10px);
+              &:last-child {
+                margin-bottom: 0;
+              }
+              a {
+                @include underlined($white, $white);
+              }
+              .tel {
+                margin-bottom: ($space + 5);
+              }
+              i {
+                margin-right: $space;
+                font-size: 45px;
+                color: $second-color;
+                @include down(1110){
+                  font-size: 40px;
+                }
+              }
+              i.ps-mail-line {
+                font-size: 30px;
+                margin-left: -4px;
+              }
+              span {
+                margin: auto 0;
+                @include down(1110) {
+                  margin:0;
+                }
+              }
+              @include down(1110) {
+                align-items: flex-start;
+              }
+            }
+            .tel {
+              .content {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .mobile-footer{
+    .left-footer{
+      .widget-wrapper{
+        display: none;
+      }
+      .sn-widget-wrapper {
+        display: none;
+      }
+      .cr-widget-wrapper {
+        display: none;
+        @include down(1110) {
+          display: block;
+        }
+      }
+      @include down(1110) {
+        border-bottom: none;
+      }
+    }
+    @include down(1110) {
+      margin-top: 10px;
+    }
+  }
+}

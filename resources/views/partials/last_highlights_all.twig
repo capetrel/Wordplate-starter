@@ -1,0 +1,42 @@
+<section class="highlights-section full-width">
+    <div class="highlights-section-title">
+        {{ __('Faits marquants', 'pasrel') }}
+    </div>
+    <div class="highlights-slides container swiper-container">
+        <div class="swiper-wrapper">
+            {% for highlight in homeHighlights %}
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        {% if highlight.thumbnail is null %}
+                            <div class="img-wrapper">
+                                <img src="{{ site.theme.link }}/assets/images/default/img-420x280.png" alt="Pas d'image">
+                            </div>
+                        {% else %}
+                            <div class="img-wrapper">
+                                <img src="{{ highlight.thumbnail.src('thumbnail') }}" alt="{{ highlight.thumbnail.alt ? highlight.thumbnail.alt : highlight.title }}">
+                            </div>
+                        {% endif %}
+                        <div class="highlight-slide-body">
+                            <div class="date">{{ highlight.date('d/m/Y') }}</div>
+                            <div class="title">{{ highlight.title }}</div>
+                            <div class="excerpt">{{ highlight.post_content|excerpt(30) }}...</div>
+                            <a class="more" href="{{ highlight.link }}" title="{{ __('Lire l\'article',  'pasrel') }}">{{ __('Lire l\'article',  'pasrel') }}</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination-wrapper container">
+            <div class="highlights-see-all">
+                <a href="/faits-marquants/" class="button">
+                    {{ __('Voir tous les faits marquants', 'pasrel') }}
+                </a>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,83 @@
+header.page .banner .banner-bg,
+header.page .banner .banner-overlay,
+header.page .banner .banner-title {
+  height: 209px;
+}
+
+
+header.page .banner .banner-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-family: $light-font;
+    font-size: $main-txt * 3;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    margin: 0;
+    @include down(480) {
+      font-size: $main-txt * 2;
+    }
+  }
+}
+header {
+  .banner {
+    position: relative;
+    .banner-bg, .banner-overlay, .banner-title  {
+      height: 373px;
+      &.container {
+        @include down(1110){
+          max-width: 1110px;
+        }
+      }
+    }
+    .banner-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -2;
+      width: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+    .banner-overlay {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      &.academyc_red {
+        background: linear-gradient(0.25turn, $academyc-color, rgba(255,255,255,0.2), $academyc-color);
+      }
+      &.industriel_green {
+        background: linear-gradient(0.25turn, $industrial-color, rgba(255,255,255,0.2), $industrial-color);
+      }
+      &.people_blue {
+        background: linear-gradient(0.25turn, $people-color, rgba(255,255,255,0.2), $people-color);
+      }
+      &.current_light_blue {
+        background: linear-gradient(0.25turn, $second-color, rgba(255,255,255,0.2), $second-color);
+      }
+    }
+    .banner-title {
+      display: flex;
+      align-items: center;
+      z-index: 1;
+      width: 100%;
+      padding: 0  10%;
+      h1 {
+        width: 72%;
+        @extend %headerh1;
+        @include down(880) {
+          width: 100%;
+          text-align: center;
+        }
+      }
+      @include down(880) {
+        padding: 0  $space;
+      }
+    }
+  }
+}

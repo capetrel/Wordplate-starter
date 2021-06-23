@@ -1,0 +1,13 @@
+{% if(post.found_posts != false) %}
+    {% if post[0].meta('special_page_title') %}
+        <h1>{{ post[0].meta('special_page_title') }}</h1>
+    {% else %}
+        <h1>{{ post[0].title }}</h1>
+    {% endif %}
+{% else %}
+    {% if post.meta('special_page_title') %}
+        <h1>{{ post.meta('special_page_title') }}</h1>
+    {% else %}
+        <h1>{{ post.title }}</h1>
+    {% endif %}
+{% endif %}

@@ -1,0 +1,21 @@
+{% extends 'layouts/base.twig' %}
+
+{% block body %}
+
+    {% include 'partials/header_buttons.twig' %}
+
+    <main class="page-2col {{ post.meta('page_template_image_position') == 'left_col' ? 'img-left' : 'img-right' }} container {{ post.meta('taxonomy_select_color') }}">
+
+        <div class="col col-left">
+            <img class="column-img" src="{{ Image(post.meta('page_template_image')).src('thumbs_col') }}" alt="{{ Image(post.meta('page_template_image')).alt ? Image(post.meta('page_template_image')).alt : post.title }}" />
+        </div>
+
+        {% if post.content %}
+            <div class="col col-right">
+                {{ post.content }}
+            </div>
+        {% endif %}
+
+    </main>
+
+{% endblock %}

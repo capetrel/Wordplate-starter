@@ -1,0 +1,22 @@
+<div class="pagination">
+    {% if items.pagination.prev %}
+        <span class="arrow-container"><a href="{{ items.pagination.prev.link }}" class="prev {{ items.pagination.prev.link|length ? '' : 'invisible' }}"><i class="ps-arrow-left"></i></a></span>
+    {% endif %}
+    <ul class="pages">
+        {% for k, page in items.pagination.pages %}
+            <li>
+                {% if page.link %}
+                    <a href="{{page.link}}" class="{{page.class}}">{{page.title}}</a>
+                {% else %}
+                    <span class="{{page.class}}">{{page.title}}</span>
+                {% endif %}
+            </li>
+            {% if (k + 1) != items.pagination.total %}
+                <span class="sep">&nbsp;-&nbsp;</span>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    {% if items.pagination.next %}
+        <span class="arrow-container"><a href="{{items.pagination.next.link}}" class="next {{ items.pagination.next.link|length ? '' : 'invisible' }}"><i class="ps-arrow-right"></i></a></span>
+    {% endif %}
+</div>

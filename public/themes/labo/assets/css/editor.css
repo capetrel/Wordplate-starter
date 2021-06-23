@@ -1,0 +1,321 @@
+@font-face {
+  font-family: "montserrat-Light";
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/Montserrat-Light.woff?05c8ae9716360e56163fa0e86022d3c7) format("woff");
+}
+@font-face {
+  font-family: "montserrat-Light";
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/Montserrat-Light.woff2?f7bb2606b3bb239169fe7396867e840c) format("woff2");
+}
+@font-face {
+  font-family: "montserrat-regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/Montserrat-Regular.woff?498c8cdbbcd5264ad13c3d49457a0e11) format("woff");
+}
+@font-face {
+  font-family: "montserrat-regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/Montserrat-Regular.woff2?518803d3e08549d2d704d9a6643a3887) format("woff2");
+}
+@font-face {
+  font-family: "montserrat-medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/Montserrat-Medium.woff?1415d3efde4fddeccbca369d67f3d268) format("woff");
+}
+@font-face {
+  font-family: "montserrat-medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/Montserrat-Medium.woff2?c416eeaec33891f7c0081be1acd57151) format("woff2");
+}
+@font-face {
+  font-family: "montserrat-bold";
+  font-weight: bold;
+  src: url(../fonts/Montserrat-Bold.woff?0329bf8fcbfdd06caa2491b2d6a094fd) format("woff");
+}
+@font-face {
+  font-family: "montserrat-bold";
+  font-weight: bold;
+  src: url(../fonts/Montserrat-Bold.woff2?dbf9cc3b5d0be686036798f4c2ed9c04) format("woff2");
+}
+@font-face {
+  font-family: "montserrat-extrabold";
+  font-weight: 800;
+  src: url(../fonts/Montserrat-ExtraBold.woff?666df37fdf1c78ca22ddd7e8a99f8760) format("woff");
+}
+@font-face {
+  font-family: "montserrat-extrabold";
+  font-weight: 800;
+  src: url(../fonts/Montserrat-ExtraBold.woff2?95c2242ba06d2eb0400546a72fc2d08d) format("woff2");
+}
+@font-face {
+  font-family: "montserrat-black";
+  font-weight: 900;
+  src: url(../fonts/Montserrat-Black.woff?b45e582577e958783349a6f29a184c10) format("woff");
+}
+@font-face {
+  font-family: "montserrat-black";
+  font-weight: 900;
+  src: url(../fonts/Montserrat-Black.woff2?518c6d83e38cb791a766fefec95eb47d) format("woff2");
+}
+html, body {
+  font-size: 15px;
+  line-height: 1.2;
+  font-family: "montserrat-medium", arial, sans-serif;
+  color: #1d1c6c;
+}
+html h2, html .h2, body h2, body .h2 {
+  font-family: "montserrat-bold", arial, sans-serif;
+  font-size: 21px;
+  margin-bottom: 5px;
+}
+@media (max-width: 601px) {
+  html h2, html .h2, body h2, body .h2 {
+    font-size: 18px;
+  }
+}
+html h3, html .h3, body h3, body .h3 {
+  font-family: "montserrat-bold", arial, sans-serif;
+  font-size: 23px;
+  line-height: 1.2;
+  margin: 20px 0;
+}
+html p, html .formatted-content p, html main ul, html aside ul, body p, body .formatted-content p, body main ul, body aside ul {
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+html .formatted-content a, body .formatted-content a {
+  text-decoration: underline;
+}
+html .formatted-content a.button, body .formatted-content a.button {
+  text-decoration: none;
+}
+html p span.forward-p, body p span.forward-p {
+  font-family: "montserrat-bold", arial, sans-serif;
+  font-size: 20px;
+  color: #1d1c6c;
+}
+html .academyc_red .formatted-content p span.forward-p, body .academyc_red .formatted-content p span.forward-p {
+  color: #e15327;
+}
+html .industriel_green .formatted-content p span.forward-p, body .industriel_green .formatted-content p span.forward-p {
+  color: #a6cc08;
+}
+html .people_blue .formatted-content p span.forward-p, body .people_blue .formatted-content p span.forward-p {
+  color: #0b96da;
+}
+html p + ul, body p + ul {
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+html main .pagination ul li:before, body main .pagination ul li:before {
+  content: "";
+}
+html main ul,
+html aside ul, body main ul,
+body aside ul {
+  /*list-style: disc;
+  padding-left: $space;*/
+  list-style: none;
+}
+html main ul li,
+html aside ul li, body main ul li,
+body aside ul li {
+  position: relative;
+  padding-left: 8px;
+}
+html main ul li:before,
+html aside ul li:before, body main ul li:before,
+body aside ul li:before {
+  content: ".";
+  position: absolute;
+  left: 0;
+  top: -3px;
+}
+html a, body a {
+  text-decoration: none;
+  color: inherit;
+}
+html strong, body strong {
+  font-family: "montserrat-extrabold", arial, sans-serif;
+}
+html em, html i, body em, body i {
+  font-style: italic;
+}
+html mark, html body mark, body html mark, body html mark, html body mark, body mark {
+  background-color: #29acec;
+  position: relative;
+  padding: 5px 3px;
+}
+html sup, body sup {
+  font-size: 10px;
+  vertical-align: super;
+}
+html sub, body sub {
+  font-size: 10px;
+  vertical-align: super;
+}
+
+html .button, body .button {
+  border-radius: 6px;
+  display: inline-block;
+  cursor: pointer;
+  border: solid 2px #1d1c6c;
+  color: #FFF;
+  background-color: #1d1c6c;
+  padding: 6px 12px;
+  text-decoration: none;
+  font-family: "montserrat-bold", arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  transition: background-color, border, color 0.2s ease-in-out;
+  width: auto;
+  position: relative;
+  z-index: 2;
+}
+html .button.bg-academiques-et-soignants, body .button.bg-academiques-et-soignants {
+  background-color: #e15327;
+  border: solid 2px #e15327;
+}
+html .button.bg-academiques-et-soignants:hover, body .button.bg-academiques-et-soignants:hover {
+  border: solid 2px #e15327;
+  color: #e15327;
+  background-color: #FFF;
+}
+html .button.bg-industriels, body .button.bg-industriels {
+  background-color: #a6cc08;
+  border: solid 2px #a6cc08;
+}
+html .button.bg-industriels:hover, body .button.bg-industriels:hover {
+  border: solid 2px #a6cc08;
+  color: #a6cc08;
+  background-color: #FFF;
+}
+html .button.bg-grand-public, body .button.bg-grand-public {
+  background-color: #0b96da;
+  border: solid 2px #0b96da;
+}
+html .button.bg-grand-public:hover, body .button.bg-grand-public:hover {
+  border: solid 2px #0b96da;
+  color: #0b96da;
+  background-color: #FFF;
+}
+html .button:hover, body .button:hover {
+  border: solid 2px #1d1c6c;
+  color: #1d1c6c;
+  background-color: #FFF;
+}
+html .btn-header, body .btn-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "montserrat-extrabold", arial, sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #FFF;
+  padding: 15px 30px;
+  border: 0;
+  transition: background-color, color 0.3s ease-in-out;
+  width: auto;
+}
+html .btn-header.active, body .btn-header.active {
+  cursor: default;
+  pointer-events: none;
+}
+html .btn-header .icon, body .btn-header .icon {
+  font-size: 25px;
+  margin-right: 15px;
+}
+html .btn-header.academyc_red, body .btn-header.academyc_red {
+  border: solid 2px #e15327;
+  background-color: #e15327;
+}
+html .btn-header.academyc_red.active, html .btn-header.academyc_red:hover, body .btn-header.academyc_red.active, body .btn-header.academyc_red:hover {
+  color: #e15327;
+  background-color: #FFF;
+}
+html .btn-header.industriel_green, body .btn-header.industriel_green {
+  border: solid 2px #a6cc08;
+  background-color: #a6cc08;
+}
+html .btn-header.industriel_green.active, html .btn-header.industriel_green:hover, body .btn-header.industriel_green.active, body .btn-header.industriel_green:hover {
+  color: #a6cc08;
+  background-color: #FFF;
+}
+html .btn-header.people_blue, body .btn-header.people_blue {
+  border: solid 2px #0b96da;
+  background-color: #0b96da;
+}
+html .btn-header.people_blue.active, html .btn-header.people_blue:hover, body .btn-header.people_blue.active, body .btn-header.people_blue:hover {
+  color: #0b96da;
+  background-color: #FFF;
+}
+html .btn-header.current_light_blue, body .btn-header.current_light_blue {
+  border: solid 2px #29acec;
+  background-color: #29acec;
+}
+html .btn-header.current_light_blue.active, html .btn-header.current_light_blue:hover, body .btn-header.current_light_blue.active, body .btn-header.current_light_blue:hover {
+  color: #29acec;
+  background-color: #FFF;
+}
+html .btn-header.current_dark_blue, body .btn-header.current_dark_blue {
+  border: solid 2px #1d1c6c;
+  background-color: #1d1c6c;
+}
+html .btn-header.current_dark_blue.active, html .btn-header.current_dark_blue:hover, body .btn-header.current_dark_blue.active, body .btn-header.current_dark_blue:hover {
+  color: #1d1c6c;
+  background-color: #FFF;
+}
+
+body#tinymce.wp-editor {
+  margin: 10px;
+}
+body#tinymce.wp-editor p span.forward-p {
+  font-family: "montserrat-bold", arial, sans-serif;
+  font-size: 20px;
+}
+body#tinymce.wp-editor p, body#tinymce.wp-editor ul {
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+body#tinymce.wp-editor a {
+  text-decoration: underline;
+}
+body#tinymce.wp-editor a.button {
+  text-decoration: none;
+}
+body#tinymce.wp-editor p + ul {
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+body#tinymce.wp-editor ul {
+  list-style: none;
+}
+body#tinymce.wp-editor ul li {
+  position: relative;
+  padding-left: 8px;
+}
+body#tinymce.wp-editor ul li:before {
+  content: ".";
+  position: absolute;
+  left: 0;
+  top: -3px;
+}
+body#tinymce.wp-editor sup {
+  font-size: 10px;
+  vertical-align: super;
+}
+body#tinymce.wp-editor sub {
+  font-size: 10px;
+  vertical-align: super;
+}

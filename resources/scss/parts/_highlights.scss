@@ -1,0 +1,186 @@
+section.highlights-section {
+  background-color: $gray1;
+  .highlights-section-title {
+    font-family: $light-font;
+    font-size: ($main-txt + 28);
+    text-align: center;
+    padding-top: $space;
+  }
+  .highlights-slides.container {
+    max-width: 100%;
+    height: auto;
+    padding: ($space + 7) 95px;
+    @include down(1120) {
+      max-width: 1110px;
+    }
+    @include down(620) {
+      padding: ($space + 7) $space;
+    }
+    .swiper-wrapper{
+      width: 1110px;
+      height: 100%;
+      @include down(1120) {
+        width: 100%;
+      }
+      .swiper-slide {
+        .slide-content {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          background-color: $white;
+          @include down(820) {
+            flex-direction: column;
+          }
+          .img-wrapper {
+            width: auto;
+            height: 280px;
+            margin-right: $space;
+            @include down(820) {
+              margin-right: 0;
+            }
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+          .highlight-slide-body {
+            width: 500px;
+            padding: 3% ($space + 10);
+            @include down(820) {
+              width: 100%;
+            }
+            .date {
+              font-family: $medium-font;
+              margin: ($space - 5) 0 ($space - 5) 0;
+            }
+            .title {
+              font-family: $bold-font;
+              font-size: ($main-txt + 12) ;
+              margin-bottom: ($space - 10);
+            }
+            .more{
+              font-family: $bold-font;
+              margin-top: ($space - 2);
+              @include underlined($main-color, $main-color)
+            }
+          }
+        }
+      }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      top: 42%;
+      width: 42px;
+      height: 78px;
+      color: $gray4;
+      transition: transform 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+      &:after {
+        display: none;
+      }
+      @include down(620) {
+        display: none;
+      }
+    }
+    .swiper-button-prev {
+      background-image: url(../../img/icons/arrow-prev.svg);
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: center;
+      left: 16%;
+      right: auto;
+      @include down(1760) {
+        left: 14%;
+      }
+      @include down(1670) {
+        left: 12%;
+      }
+      @include down(1575) {
+        left: 10%;
+      }
+      @include down(1496) {
+        left: 8%;
+      }
+      @include down(1420) {
+        left: 4%;
+      }
+      @include down(1300) {
+        left: 1%;
+      }
+      @include down(1220) {
+        display: none;
+      }
+    }
+    .swiper-button-next {
+      background-image: url(../../img/icons/arrow-next.svg);
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: center;
+      right: 16%;
+      left: auto;
+      @include down(1760) {
+        right: 14%;
+      }
+      @include down(1670) {
+        right: 12%;
+      }
+      @include down(1575) {
+        right: 10%;
+      }
+      @include down(1496) {
+        right: 8%;
+      }
+      @include down(1420) {
+        right: 4%;
+      }
+      @include down(1300) {
+        right: 1%;
+      }
+      @include down(1220) {
+        display: none;
+      }
+    }
+    .swiper-pagination-wrapper {
+      margin-top: ($space + 10);
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      @include down(620) {
+        flex-direction: column-reverse;
+        justify-content: center;
+      }
+      .swiper-pagination {
+        position: initial;
+        .swiper-pagination-bullet {
+          width: 16px;
+          height: 16px;
+          background-color: $gray1;
+          border: solid 1px $main-color;
+          margin-right: 7px;
+          transition: background-color 0.2s ease-in-out;
+          opacity: 1;
+          @include down(620) {
+            margin-bottom: $space;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+          &:hover {
+            background-color: $gray6;
+          }
+          &.swiper-pagination-bullet-active {
+            background-color: $main-color;
+            border-color: $main-color;
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+}

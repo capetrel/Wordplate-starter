@@ -1,0 +1,491 @@
+.nav-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 155px;
+  background-color: $white;
+  padding: ($space + 10) 0;
+  transition: all 0.2s ease-in-out;
+  z-index: 1000;
+  @include down(650) {
+    height: 100px;
+    padding: ($space) ($space - 10);
+  }
+  .logo {
+    width: 268px;
+    height: 95px;
+    transition: all 0.2s ease-in-out;
+    @include down(650) {
+      width: 175px;
+      height: auto;
+    }
+    @include down(440) {
+      margin-left: -12px;
+    }
+    @include down(390) {
+      width: 130px;
+    }
+    a {
+      display: block;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  // On scrolling reduce header elememnts
+  &.scroll {
+    height: 110px;
+    padding: ($space) ($space - 10);
+    box-shadow: 1px 0 13px 0 rgba(0,0,0,0.38);
+    @include down(650) {
+      height: 80px;
+      padding: 0 ($space - 15);
+    }
+    @include down(390) {
+      height: 70px;
+    }
+    .nav-header-wrapper {
+      @include down(650) {
+        padding: ($space - 10) 0;
+      }
+      input + label {
+        top: 9px;
+        height: 25px;
+        width: 32px;
+        @include down(650) {
+          top: 5px;
+          height: 16px;
+          width: 28px;
+        }
+        &:after {
+          font-size: ($main-txt - 2);
+          line-height: 1.4;
+          margin-left: 45px;
+          @include down(650) {
+            display: block;
+            margin-top: 1px;
+            font-size: ($main-txt - 2);
+            line-height: 1;
+            margin-left: 40px;
+          }
+        }
+        span {
+          top: 8px;
+          height: 3px;
+          @include down(650) {
+            top: 6px;
+          }
+        }
+        span:first-child {
+          top: 0;
+        }
+        span:nth-child(3) {
+          top: 17px;
+          @include down(650) {
+            top: 12px;
+          }
+        }
+      }
+      .logo {
+        width: 190px;
+        height: auto;
+        @include down(650) {
+          width: 140px;
+          height: auto;
+        }
+        @include down(440) {
+          margin-left: -18px;
+        }
+        @include down(390) {
+          width: 110px;
+        }
+      }
+      .various {
+        margin-top: ($space - 6);
+        @include down(650) {
+          margin-top: ($space - 10);
+        }
+        .lang {
+          font-size: ($main-txt - 2);
+          @include down(650) {
+            font-size: ($main-txt - 3);
+          }
+        }
+        .social {
+          font-size: ($main-txt + 7);
+          @include down(650) {
+            font-size: ($main-txt + 2);
+          }
+        }
+      }
+    }
+  }
+
+  // Non scrolling
+  .nav-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include down(572) {
+      padding: 0;
+      &.container {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    /* Burger */
+    #burger {
+      display: none;
+    }
+    input + label {
+      position: relative;
+      top: 13px;
+      left: $space;
+      height: 30px;
+      width: 50px;
+      z-index: 5;
+      margin-right: 62px;
+      transition: all .3s ease-in-out;
+      @include down(650) {
+        top: 9px;
+        left: 0;
+        height: 25px;
+        width: 32px;
+      }
+      @include down(440) {
+        top: -27px;
+      }
+      &:after {
+        content: "Menu";
+        display: inline-block;
+        font-family: $bold-font;
+        line-height: 1.8;
+        vertical-align: middle;
+        text-transform: uppercase;
+        background: none;
+        height: fit-content;
+        width: auto;
+        margin-left: 60px;
+        transition: all .3s ease-in-out;
+        @include down(650) {
+          font-size: ($main-txt - 2);
+          line-height: 1.4;
+          margin-left: 52px;
+        }
+        @include down(440) {
+          font-size: 12px;
+          margin-left: 40px;
+        }
+      }
+      span {
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        top: 12px;
+        left: 0;
+        display: block;
+        background: $main-color;
+        transition: all .3s ease-in-out;
+        @include down(650) {
+          top: 9px;
+        }
+      }
+      span:first-child {
+        top: 0;
+      }
+      span:nth-child(3) {
+        top: 24px;
+        @include down(650) {
+          top: 17px;
+        }
+      }
+    }
+    label:hover {
+      cursor: pointer;
+    }
+    input:checked + label {
+      &:after {
+        content: "Fermer";
+      }
+      span {
+        opacity: 0;
+        top: 10px;
+      }
+      span:first-child {
+        opacity: 1;
+        transform: rotate(45deg);
+      }
+      span:nth-child(3) {
+        opacity: 1;
+        transform: rotate(-45deg);
+      }
+      span:last-child {
+        opacity: 1;
+      }
+    }
+
+    /* Menu */
+    .main-menu-wrapper {
+      width: 100%;
+      background-color: #00000099;
+      .main-menu{
+        .top-overlay,
+        nav,
+        form {
+          background-color: $white;
+          width: 470px;
+          @include down(490) {
+            width: 100%;
+          }
+        }
+        &.container {
+          @include down(570) {
+            max-width: 560px;
+          }
+          @include down(490) {
+            max-width: 310px;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+
+    /* Menu uncheck */
+    input ~ .main-menu-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 0;
+      opacity: 0;
+      z-index: 3;
+      // transition: opacity 0.2s ease-out;
+      .main-menu {
+        height: 0;
+        // transition: height, opacity .21s ease-in-out;
+        &.container {
+          padding-left: 0;
+          padding-right: 0;
+        }
+        div.top-overlay {
+          height: 0;
+          background-color: $white;
+          transition: height .3s ease-in-out;
+        }
+        nav.menu-menu-entete-container {
+          height: 0;
+          padding-right: ($space + 10);
+          padding-left:($space + 10);
+          overflow-y: auto;
+          transition: height .3s ease-in-out;
+          background:
+                  linear-gradient(white 30%, rgba(255,255,255,0)),
+                  linear-gradient(rgba(255,255,255,0), white 70%) 0 100%,
+                  radial-gradient(farthest-side at 50% 0, rgba(0,0,0,.2), rgba(0,0,0,0)),
+                  radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
+          background-repeat: no-repeat;
+          background-color: white;
+          background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+          background-attachment: local, local, scroll, scroll;
+          @include down(570) {
+            padding-left:($space - 5);
+          }
+          .menu {
+            height: 0;
+            transition: height .3s ease-in-out;
+            .menu-item {
+              margin-bottom: ($space);
+              a {
+                font-family: $bold-font;
+                font-size: ($main-txt * 2);
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $main-color;
+                @include underlined($second-color, $industrial-color, 5px);
+                @include down(480) {
+                  font-size: ($main-txt + 10);
+                }
+              }
+              &.menu-item-has-children.dropped {
+                // TODO vérifier sur safari que pas ouvert par defaut
+                .sub-menu {
+                  height: 0;
+                  animation: growDown 300ms forwards;
+                  transform-origin: top left;
+                }
+              }
+              &.menu-item-has-children {
+                .sub-menu {
+                  height: 100%;
+                  animation: growUp 300ms forwards;
+                  transform-origin: top left;
+                  .menu-item {
+                    margin-top: 2px;
+                    margin-bottom: ($space - 10);
+                    &:first-child {
+                      padding-top: 10px;
+                    }
+                    a {
+                      font-family: $medium-font;
+                      font-size: $main-txt;
+                      text-transform: none;
+                      text-decoration: none;
+                      @include underlined($main-color, $main-color);
+                      @include down(480) {
+                        font-size: ($main-txt - 2);
+                      }
+                    }
+                  }
+                  .current-menu-parent a,
+                  .current-menu-item a {
+                    &:before,
+                    &:after {
+                      width: 100%;
+                      opacity: 1;
+                    }
+                  }
+                  @include down(570) {
+                    opacity: 1;
+                    visibility: visible;
+                    height: fit-content;
+                  }
+                }
+              }
+            }
+            .current-menu-parent a,
+            .current-menu-item a {
+              &:before,
+              &:after {
+                width: 100%;
+                opacity: 1;
+              }
+            }
+          }
+        }
+        form.search-form {
+          display: block;
+          height: 0;
+          padding: 0 ($space + 10);
+          // transition: height .3s ease-in-out;
+          @include down(570) {
+            padding: $space ($space - 5);
+          }
+          label {
+            width: 100%;
+            &:before {
+              display: block;
+              content: url('../../img/icons/magnifyer.svg');
+              position: relative;
+              left: 2px;
+              bottom: -40px;
+              width: 38px;
+              height: 38px;
+            }
+            .screen-reader-text {
+              display: none;
+            }
+            input.search-field {
+              display: block;
+              width: 100%;
+              font-family: inherit;
+              padding: 10px 5px 10px ($space * 2);
+              border-top: 0;
+              border-right: 0;
+              border-bottom: 2px solid $main-color;
+              border-left: 0;
+              border-radius: 0;
+              &::placeholder {
+                font-family: $medium-font;
+                color: $main-color;
+                font-size: $main-txt;
+              }
+            }
+          }
+          input[type="submit"] {
+            display: none;
+          }
+        }
+      }
+    }
+
+    /* Menu checked */
+    input:checked ~ .main-menu-wrapper {
+      height: 100%;
+      opacity: 1;
+      transition: opacity .2s ease-in-out;
+      .main-menu {
+        height: 100%;
+        transition: height .25s ease-in-out;
+        div.top-overlay {
+          height: 15%;
+          transition: height .26s ease-in-out;
+        }
+        nav.menu-menu-entete-container {
+          height: 70%;
+          transition: height .28s ease-in-out;
+        }
+        form.search-form {
+          height: 15%;
+          display: flex;
+          align-items: flex-end;
+          padding-bottom: $space;
+          transition: height, padding-bottom .3s ease-in-out;
+        }
+      }
+    }
+
+    /* Other header elements */
+    .various{
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      margin-top: ($space + 3);
+      margin-right: $space;
+      transition: all .3s ease-in-out;
+      @include down(650) {
+        margin-top: ($space - 5);
+        margin-right: 0;
+      }
+      @include down(440) {
+        margin-top: -65px;
+      }
+      .lang {
+        font-family: $bold-font;
+        color: $gray5;
+        transition: all .3s ease-in-out;
+        @include down(650) {
+          font-size: ($main-txt - 2);
+        }
+        .active {
+          color: $main-color;
+        }
+        span{
+          letter-spacing: -1px;
+        }
+        +.social {
+          margin-left: ($space - 10);
+          @include down(440) {
+            margin-left: 4px;
+          }
+          @include down(330) {
+            margin-left: 0;
+          }
+        }
+      }
+      .social {
+        font-size: ($main-txt * 2);
+        line-height: 0;
+        transition: all .2s ease-in-out;
+        @include down(650) {
+          font-size: ($main-txt + 5);
+        }
+        &:hover {
+          color: $second-color
+        }
+      }
+    }
+  }
+}

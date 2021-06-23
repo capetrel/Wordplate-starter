@@ -1,0 +1,13 @@
+%shadow{
+  background: #6f99ad;
+  border: 1px solid #cfd5e3;
+  box-shadow: 0 3px 8px #d9deea;
+  border-radius: 4px;
+  &:hover {
+    box-shadow: 0 3px 10px #d9deea;
+  }
+}
+
+.shadow {
+  @extend %shadow;
+}

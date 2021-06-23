@@ -1,0 +1,128 @@
+:root {
+  --litepicker-container-months-color-bg: #f0f0f0;
+  --litepicker-container-months-box-shadow-color: none;
+  --litepicker-footer-color-bg: #f0f0f0;
+  --litepicker-footer-box-shadow-color: none;
+  --litepicker-tooltip-color-bg: #f0f0f0;
+  --litepicker-month-header-color: #1d1c6c;
+  --litepicker-button-prev-month-color: #1d1c6c;
+  --litepicker-button-next-month-color: #1d1c6c;
+  --litepicker-button-prev-month-color-hover: #29acec;
+  --litepicker-button-next-month-color-hover: #29acec;
+  --litepicker-month-width: calc(var(--litepicker-day-width) * 7);
+  --litepicker-month-weekday-color: #757474;
+  --litepicker-month-week-number-color: #757474;
+  --litepicker-day-width: 33px;
+  --litepicker-day-color-hover: #1d1c6c;
+  --litepicker-is-today-color: #1d1c6c;
+  --litepicker-is-in-range-color: #1d1c6c;
+  --litepicker-is-locked-color: #757474;
+  --litepicker-is-start-color-bg: #1d1c6c;
+  --litepicker-is-end-color: #fff;
+  --litepicker-is-end-color-bg: #1d1c6c;
+  --litepicker-button-cancel-color: #fff;
+  --litepicker-button-cancel-color-bg: #9e9e9e;
+  --litepicker-button-apply-color: #fff;
+  --litepicker-button-apply-color-bg: #2196f3;
+  --litepicker-button-reset-color: #909090;
+  --litepicker-button-reset-color-hover: #2196f3;
+  --litepicker-highlighted-day-color: #333;
+  --litepicker-highlighted-day-color-bg: #29acec;
+}
+#calendarPicker {
+  .litepicker {
+    @include down(1110) {
+      width: 100%;
+    }
+    .container__main {
+      background-color: $gray2;
+      border-radius: 5px;
+      .container__months {
+        padding: $space ($space - 3)$space ($space - 3);
+        .month-item {
+          .month-item-header {
+            font-family: $bold-font;
+            font-size: $main-txt;
+          }
+          .month-item-weekdays-row {
+            padding: 7px 0;
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: bold;
+          }
+          .container__days {
+            font-size: $main-txt;
+            font-family: $regular-font;
+            div {
+              padding: 10px 5px;
+              border-radius: 0;
+              border-bottom: solid 2px $white;
+            }
+            .day-item {
+              color: $main-color;
+              &.is-start-date,
+              &.is-in-range,
+              &.is-end-date {
+                color: $white;
+              }
+              &.is-today {
+                font-family: $bold-font;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.widget-wrapper {
+  .calendar_wrap {
+    background-color: $gray2;
+    padding: $space ($space - 3) 0 ($space - 3);
+    border-radius: 5px;
+    .wp-calendar-table {
+      tr {
+        border-bottom: solid 2px $white;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+      th, td {
+        padding: 10px 8px;
+      }
+      caption {
+        font-family: $bold-font;
+        margin-bottom: $space - 10;
+      }
+      thead {
+        font-family: $light-font;
+        color: $gray3;
+      }
+      tbody {
+        font-family: $light-font;
+        a {
+          font-family: $bold-font;
+        }
+      }
+    }
+    .wp-calendar-nav {
+      position: relative;
+      bottom: 261px;
+      left: 10px;
+      .wp-calendar-nav-prev {
+        a {
+          visibility: hidden;
+          &:after {
+            content: '<';
+            font-family: $bold-font;
+            position: absolute;
+            top: 0;
+            left: 0;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{% extends 'layouts/base.twig' %}
+
+{% block body %}
+
+        {% include 'partials/header_buttons.twig' %}
+
+        <main class="page-accordion container {{ post.meta('taxonomy_select_color') }}">
+
+            {% include 'partials/content.twig' %}
+
+            {% if accordions %}
+                <section class="accordions">
+                    {% for accordion in accordions %}
+                        <div class="accordion">
+                            <h2 class="title ac-header">
+                                {{ accordion.accordion_title }}
+                            </h2>
+                            <button class="ac-trigger"></button>
+                            <div class="ac-panel">
+                                <div class="inner">
+                                    {% if accordion.accordion_image != '' %}
+                                        <div class="img-wrapper">
+                                            <img src="{{ Image(accordion.accordion_image).src|resize(356, 237) }}" alt="{{ Image(accordion.accordion_image).alt ? Image(accordion.accordion_image).alt : accordion.accordion_title }}">
+                                        </div>
+                                    {% endif %}
+                                    <div class="formatted-content">{{ function('wpautop', accordion.accordion_content) }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </section>
+            {% endif %}
+        </main>
+{% endblock %}

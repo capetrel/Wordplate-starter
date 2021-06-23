@@ -1,0 +1,12 @@
+{% extends 'layouts/base.twig' %}
+
+{% block body %}
+
+    <main>
+        <div class="container {{ post.meta('taxonomy_select_color') }}">
+            {% include 'partials/page_title.twig' %}
+        </div>
+        {% include 'partials/content.twig' %}
+    </main>
+
+{% endblock %}

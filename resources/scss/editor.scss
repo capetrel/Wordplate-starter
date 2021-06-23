@@ -1,0 +1,49 @@
+@import "variables/colors";
+@import "variables/spaces";
+@import 'tools/mixins';
+@import 'modules/typography';
+@import 'modules/buttons';
+
+body#tinymce.wp-editor {
+  margin: 10px;
+  p span.forward-p {
+    font-family: $bold-font;
+    font-size: 20px;
+  }
+
+  p, ul {
+    line-height: 1.4;
+    margin-bottom: $space - 5;
+  }
+  a {
+    text-decoration: underline;
+  }
+  a.button {
+    text-decoration: none;
+  }
+  p + ul {
+    margin-top: -($space - 5);
+    margin-bottom: ($space - 5);
+  }
+  ul {
+    list-style: none;
+    li {
+      position: relative;
+      padding-left: 8px;
+      &:before {
+        content: '\002E';
+        position: absolute;
+        left: 0;
+        top: -3px
+      }
+    }
+  }
+  sup {
+    font-size: ($main-txt - 5px);
+    vertical-align: super;
+  }
+  sub {
+    font-size: ($main-txt - 5px);
+    vertical-align: super;
+  }
+}

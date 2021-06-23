@@ -1,0 +1,6 @@
+.idea
+.vcode
+
+node_modules
+vendor
+.env

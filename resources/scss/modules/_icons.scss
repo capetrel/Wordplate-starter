@@ -1,0 +1,41 @@
+@include font-face('p-icons', '../fonts/pasrel-icon-font', normal, normal, svg);
+@include font-face('p-icons', '../fonts/pasrel-icon-font', normal, normal, woff);
+@include font-face('p-icons', '../fonts/pasrel-icon-font', normal, normal, ttf);
+
+[class^="ps-"], [class*=" ps-"] {
+  font-family: 'p-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ps-facebook-box:before {content: "\e90e";}
+.ps-instagram-box:before {content: "\e902";} // ou \e901
+.ps-instagram-fill:before { content: "\e905";}
+.ps-linkedin-box:before {content: "\e906";}
+.ps-mail-line:before {content: "\e907";}
+.ps-map-pin-line:before {content: "\e908";}
+.ps-smartphone-fill:before {content: "\e909";}
+.ps-smartphone-line:before {content: "\e90a";}
+.ps-twitter-box:before {content: "\e90b";}
+.ps-whatsapp-fill:before {content: "\e90c";}
+.ps-youtube-fill:before {content: "\e90d";}
+.ps-arborescence:before {content: "\e90f";}
+.ps-board:before {content: "\e910";}
+.ps-book:before {content: "\e911";}
+.ps-doc:before {content: "\e912";}
+.ps-faq:before {content: "\e913";}
+.ps-hp:before {content: "\e914";}
+.ps-hub:before {content: "\e915";}
+.ps-members:before {content: "\e916";}
+.ps-platforms:before {content: "\e917";}
+.ps-presse:before {content: "\e918";}
+.ps-link-default:before {content: "\e919";}
+.ps-arrow-left:before {content: "\e900";}
+.ps-arrow-right:before {content: "\e901";}
+.ps-magnifyer:before {content: "\e91a";}
