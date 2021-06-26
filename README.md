@@ -1,24 +1,9 @@
 ## Starter Template Wordpress
-Starter kit for Wordpress devlopement with stuff for good devlopment practice.
+Starter kit for Wordpress developement with stuff for good development practice.
 
 ## WordPlate
 
 WordPlate is simply a wrapper around WordPress. It makes developers life easier. It is just like building any other WordPress website with [themes](https://developer.wordpress.org/themes) and [plugins](https://developer.wordpress.org/plugins). Just with sprinkles on top.
-
-[![Build Status](https://badgen.net/github/checks/wordplate/framework?label=build&icon=github)](https://github.com/wordplate/framework/actions)
-[![Monthly Downloads](https://badgen.net/packagist/dm/wordplate/framework)](https://packagist.org/packages/wordplate/framework/stats)
-[![Latest Version](https://badgen.net/packagist/v/wordplate/framework)](https://packagist.org/packages/wordplate/framework)
-
-- [Features](#features)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Plugins](#plugins)
-- [Laravel Mix](#laravel-mix)
-- [Integrations](#integrations)
-- [Upgrade Guide](#upgrade-guide)
-- [FAQ](#faq)
-- [Acknowledgements](#acknowledgements)
-- [Contributing](#contributing)
 
 ### Features
 
@@ -79,17 +64,15 @@ Carbon Fields - developer-oriented library for WordPress custom fields for all t
 [git](https://github.com/htmlburger/carbon-fields)
 
 
-# Développeur
-L'intégration de Carbon Field n'est pas prévu pour être utiliser avec bedrock. le fichier composer.json permet de copier les assets du vendor dans le plugins pour pouvoir utiliser Carbon Fields.
-Lancer la commande 'composer install' Pour installer les différend packet, puis lancer le script pour Carbon Fields
-composer 'run-script cf-copy' ou 'composer cf-copy'.
-Il faudra également lancer cette commande après un composer update.
+# Extra
+The integration of Carbon Field is not intended for use with bedrock. the composer.json file allows you to copy the vendor's assets into the plugins to be able to use Carbon Fields.
+Run the 'composer install' command To install the packets, then run the script for Carbon Fields
+composer 'run-script cf-copy' or 'composer cf-copy'.
+You will also need to run this command after a composer update.
 
-Le dossier ressources contient tous les assets qui doivent êtres compilés (css, js, image) ainsi que les vues Twig.
+The resources folder contains all the assets that must be compiled (css, js, image) as well as the Twig views. If the site use loco translate, the plugin scan only the theme folder, if you want to translate string in the twig file, you must move the views folder into yout theme directory and update te path in function.php
 
-Le dossier app contient un ensemble de classes indépendante du projet. Site.php est destiné à des projets wordpress, mais les autres sont framework agnostic.
-
-Le nommage des fichiers php dù à la hiérarchie des gabarits de Wordpress, ne permet pas de les nommer selon les bonnes pratiques MVC, mais le projet est en paterne MVC.
-- Les 'modèles' sont dans le dossier themes/pasrel/src/Repository
-- Les controller sont les fichiers php à la racine du thème : themes/nom-theme/index.php, themes/nom-theme/single.php, etc...
-- Les vues sont dans le dossier resources/views
+The naming of the php files due to the hierarchy of Wordpress templates, does not allow them to be named according to MVC good practices, but the project is in MVC.
+- The 'models' are in the themes / pasrel / src / Repository folder
+- The controllers are the php files at the root of the theme: themes / name-theme / index.php, themes / name-theme / single.php, etc ...
+- The views are in the resources / views folder
