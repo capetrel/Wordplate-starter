@@ -52,14 +52,18 @@ npm run build
 [![WordPress Download Count](https://img.shields.io/wordpress/plugin/dt/timber-library.svg?style=flat-square)](https://wordpress.org/plugins/timber-library/)
 [![Join the chat at https://gitter.im/timber/timber](https://img.shields.io/gitter/room/timber/timber.svg?style=flat-square)](https://gitter.im/timber/timber?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![WordPress Rating](https://img.shields.io/wordpress/plugin/r/timber-library.svg?style=flat-square)](https://wordpress.org/support/plugin/timber-library/reviews/)
+
 Timber helps you create fully-customized WordPress themes faster with more sustainable code. With Timber, you write your HTML using the Twig Template Engine separate from your PHP files.
+
 [site](https://timber.github.io/docs/guides/template-locations/)
 [git](https://github.com/timber/timber)
 
 
 ## Carbon fields
 [![Build Status](https://travis-ci.org/htmlburger/carbon-fields.svg?branch=master)](https://travis-ci.org/htmlburger/carbon-fields) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/htmlburger/carbon-fields/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/htmlburger/carbon-fields/?branch=master) [![Code Coverage](https://scrutinizer-ci.com/g/htmlburger/carbon-fields/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/htmlburger/carbon-fields/?branch=master) [![Gitter chat](https://badges.gitter.im/carbon-fields/Lobby.png)](https://gitter.im/carbon-fields/Lobby)
+
 Carbon Fields - developer-oriented library for WordPress custom fields for all types of WordPress content.
+
 [site](https://carbonfields.net/)
 [git](https://github.com/htmlburger/carbon-fields)
 
